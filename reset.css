@@ -122,3 +122,74 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+main {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+main h2 {
+  grid-column: 1 / -1;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 카드 링크 전체 영역 */
+main > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 카드 디자인 */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  background: #fff;
+
+  min-height: 150px;
+}
+
+/* 카드 hover */
+main > a:hover .card {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
+
+/* 이미지 */
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+
+  border-radius: 20px;
+  border: 2px solid #000;
+}
+
+/* 텍스트 */
+.card-text h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 반응형: 화면 작으면 1열 */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
