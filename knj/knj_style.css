@@ -1,0 +1,85 @@
+:root {
+  --primary100: #3692ff;
+  --primary200: #1967d6;
+  --primary300: #1251aa;
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+  --error: #f74747;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited, a:active {
+    color: var(--gray50);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+header {
+    background-color: var(--primary200);
+    width: 100%;
+    top: 0;
+    position: sticky;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    width: 100%;
+    padding: 0 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (min-width: 1920px) {
+  nav {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+main {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    gap: 24px;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    border-left: 4px solid var(--primary200);
+    padding: 0 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
