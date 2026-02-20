@@ -1,35 +1,30 @@
-:root {
-  --primary100: #3692ff;
-  --primary200: #1967d6;
-  --primary300: #1251aa;
-  --gray900: #111827;
-  --gray800: #1f2937;
-  --gray700: #374151;
-  --gray600: #4b5563;
-  --gray500: #6b7280;
-  --gray400: #9ca3af;
-  --gray200: #e5e7eb;
-  --gray100: #f3f4f6;
-  --gray50: #f9fafb;
-  --error: #f74747;
+body {
+  margin: 0px;
+  padding: 0;
 }
 
+/*************************
+2026.02.20 yoonsj add
+- header
+**************************/
 a:link {
   text-decoration: none;
-}
-
-a:visited,
-a:active {
-  color: var(--gray50);
 }
 
 .logo {
   font-weight: 900;
   font-size: 1.5rem;
+  color: white;
+}
+
+nav {
+  width: 100%;
+  padding: 0 200px;
+  display: flex;
 }
 
 header {
-  background-color: var(--primary200);
+  background-color: #1967d6;
   width: 100%;
   top: 0;
   position: sticky;
@@ -38,33 +33,27 @@ header {
   align-items: center;
 }
 
-header nav {
-  width: 100%;
-  padding: 0 200px;
+/*************************
+2026.02.20 yoonsj add
+- body
+**************************/
+
+.card {
   display: flex;
-  justify-content: flex-start;
-}
-
-@media (min-width: 1920px) {
-  nav {
-    max-width: 1920px;
-    margin: 0 auto;
-  }
-}
-
-main {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-article {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  padding: 40px;
-  border-radius: 16px;
+  margin: 80px auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   gap: 24px;
+  max-width: 900px;
+  min-height: 580px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
 }
 
 h1,
@@ -84,4 +73,49 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #0f1e33;
+  color: #cfd6e1;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__inner > div:first-child {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer__sns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__sns-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.footer__sns-link:hover {
+  opacity: 0.7;
+}
+
+.footer__sns-link img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
